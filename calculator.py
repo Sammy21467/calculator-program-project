@@ -1,10 +1,14 @@
 # imports
-
+import math
 
 # variables
 
 
+# Welcome
+print("Welcome to the calculator program")
+print()
 # menu
+print("")
 
 
 # loops for each thing
