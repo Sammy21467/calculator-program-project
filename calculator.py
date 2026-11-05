@@ -62,6 +62,11 @@ while True:
             ans_to_menu = input("Type 'continue' to add more or 'menu' to go back: ").lower()
             if ans_to_menu == "menu":
                 break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
 
     # subtraction
     elif menu_ans == "2" or menu_ans == "subtraction":
@@ -89,6 +94,11 @@ while True:
             ans_to_menu = input("Type 'continue' to subtract more or 'menu' to go back: ").lower()
             if ans_to_menu == "menu":
                 break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
 
     # multiplication
     elif menu_ans == "3" or menu_ans == "multiplication":
@@ -113,6 +123,11 @@ while True:
             ans_to_menu = input("Type 'continue' to multiply more or 'menu' to go back: ").lower()
             if ans_to_menu == "menu":
                 break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
 
     # division
     elif menu_ans == "4" or menu_ans == "division":
@@ -138,6 +153,11 @@ while True:
             ans_to_menu = input("Type 'continue' to divide more or 'menu' to go back: ").lower()
             if ans_to_menu == "menu":
                 break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
 
     # order of operations
     elif menu_ans == "5" or menu_ans == "order of operations":
@@ -169,6 +189,11 @@ while True:
             ans_to_menu = input("Type 'continue' to do more or 'menu' to go back: ").lower()
             if ans_to_menu == "menu":
                 break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
 
     # geometry
     elif menu_ans == "6" or menu_ans == "geometry":
@@ -178,17 +203,47 @@ while True:
         while True:
             print("What would you like to calculate?")
             print("1. Area of Circle")
-            print("2. Area of Parallelogram")
-            print("3. Area of Rectangle & Square")
-            print("4. Area of Triangle")
-            print("5. Circumference of Circle")
-            print("6. Perimeter")
-            print("7. Pythagorean Theorem")
-            print("8. Volume of Rectangular Prism")
-            print("9. Volume of Cube")
+            print("2. Area of Parallelogram/square or rectangle.")
+            print("3. Area of Triangle")
+            print("4. Circumference of Circle")
+            print("5. Perimeter")
+            print("6. Pythagorean Theorem")
+            print("7. Volume of Rectangular Prism")
+            print("8. Volume of Cube")
             geom_ans = input("Type your answer: ")
-            # try:
-            #     if geom_ans == "1":
-            #         radius = float(input("What is the radius? "))
-            #         area = math.pi * radius ** 2
-            #         print("The area of the circle is", round(area, 2))
+            try:
+                if geom_ans == "1" or geom_ans == "area of circle":
+                    radius = float(input("What is the radius? "))
+                    area = math.pi * radius ** 2
+                    print("The area of the circle is", round(area, 2))
+                    print()
+                elif geom_ans == "2" or geom_ans == "area of parallelogram":
+                    base = float(input("What is the base? "))
+                    height = float(input("What is the height? "))
+                    parallelogram_area = base * height
+                    print("The area of the parallelogram is", round(parallelogram_area, 2))
+                    print()
+                elif geom_ans == "3" or geom_ans == "area of triangle":
+                    base = float(input("What is the base? "))
+                    height = float(input("what is the height? "))
+                    triangle_area = base * height / 2
+                    print("The area of the triangle is", round(triangle_area, 2))
+                    print()
+                elif geom_ans == "4" or geom_ans == "circumference of circle":
+                    radius = float(input("What is the radius? "))
+                    circumference = 2 * math.pi * radius
+                    print("The circumference of the circle is", round(circumference, 2))
+                    print()
+            except ValueError:
+                print("Please type a number!")
+            except:
+                print("Something went wrong. Please try again.")
+            print()
+            ans_to_menu = input("type 'continue' to do more or 'menu' to go back: ").lower()
+            if ans_to_menu == "menu":
+                break
+            elif ans_to_menu == "continue":
+                continue
+            else:
+                print("Invalid input. Now exiting program.")
+                exit()
